@@ -37,6 +37,7 @@ def main():
     quat = Quaternion(axis=[0, 1, 0], degrees=180)
     target = [xyz, quat.q]
 
+    target_list = [target, target, target]
     for robot in robots:
         print(f"Controlling {robot}")
         robots[robot].set_cartesian(target)
