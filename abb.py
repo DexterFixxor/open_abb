@@ -33,10 +33,10 @@ class Robot:
         #                    args   = ((ip, port_logger))).start()
         
         self.set_units('millimeters', 'degrees')
-        self.set_tool()
-        self.set_workobject()
-        self.set_speed()
-        self.set_zone()
+        self.set_tool()         # default tool0
+        self.set_workobject()   # default wobj0
+        self.set_speed()        # default v100
+        self.set_zone()         # default Z0
 
     def connect_motion(self, remote):        
         log.info('Attempting to connect to robot motion server at %s', str(remote))
